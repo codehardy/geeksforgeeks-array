@@ -1,0 +1,55 @@
+/*package whatever //do not write package name here */
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) {
+	    
+	Scanner scan=new Scanner(System.in);
+	int test=scan.nextInt();
+	int sum=0;
+	int N,Dateinp;
+	
+for(int j=0;j<test;j++)
+	{
+	    sum=0;
+	     N=scan.nextInt();
+	     Dateinp=scan.nextInt();
+	    
+	    int arry[]=new int[N];
+	   int penalty[]=new int[N];
+	    
+	    
+	    for(int i=0;i<N;i++)
+	    arry[i]=scan.nextInt();
+	    
+	    for(int i=0;i<N;i++)
+	    penalty[i]=scan.nextInt();
+	    
+	    if(Dateinp%2==0)
+	    {
+	        for(int i=0;i<N;i++)
+	        {
+	            if(arry[i]%2 != 0)
+	            sum=sum+penalty[i];
+	        }
+	    }
+	    else
+	    {
+	        for(int i=0;i<N;i++)
+	        {
+	            if(arry[i]%2 == 0)
+	            sum=sum+penalty[i];
+	        }
+	    }
+	    
+	    System.out.println(sum);
+	    
+	}
+	
+	
+	
+	}
+}
