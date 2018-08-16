@@ -1,0 +1,39 @@
+package searching;
+
+
+public class BinarySearch {
+
+	
+	static int check(int arr[],int l,int r,int x){
+		int mid=0;
+		
+		if(l<=r)
+		{
+			mid = (l + r) >>> 1;
+
+			 if(arr[mid]==x)
+				return mid;
+			 if(arr[mid] > x)
+				return check(arr,l,mid-1,x);
+			 if(arr[mid]<x)
+				return check(arr,mid+1,r,x);
+		}
+		
+		return -1;
+	}
+	
+	
+	public static void main(String args[])
+{
+		
+		int arr[]={1,2,3,4,5,6};
+		int x=2;
+		int l=0;
+		int r=arr.length-1;
+		int result=check(arr,l,r,x);
+		
+		
+			System.out.println(result);
+
+		}
+}
